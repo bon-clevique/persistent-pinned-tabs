@@ -30,10 +30,10 @@ chrome.runtime.onInstalled.addListener(async (details) => {
     if (Array.isArray(syncTabs) && syncTabs.length > 0 && (!localTabs || localTabs.length === 0)) {
       await chrome.storage.local.set({ persistentTabs: syncTabs });
       await chrome.storage.sync.remove('persistentTabs');
-      console.log('[PersistentPinnedTabs] Migrated tabs from sync to local storage');
+      console.log('[AnchorTab] Migrated tabs from sync to local storage');
     }
   } catch (e) {
-    console.error('[PersistentPinnedTabs] Migration failed:', e);
+    console.error('[AnchorTab] Migration failed:', e);
   }
 });
 
@@ -66,7 +66,7 @@ chrome.windows.onCreated.addListener(async (window) => {
         active: false
       });
     } catch (e) {
-      console.error('[PersistentPinnedTabs] Failed to create pinned tab:', url, e);
+      console.error('[AnchorTab] Failed to create pinned tab:', url, e);
     }
   }
 

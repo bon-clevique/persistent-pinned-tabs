@@ -1,10 +1,10 @@
-# Privacy Policy — Persistent Pinned Tabs
+# Privacy Policy — Anchor Tab
 
 **Last updated:** 2026-04-20
 
 ## What we collect
 
-**Nothing.** Persistent Pinned Tabs does not collect, transmit, or share any
+**Nothing.** Anchor Tab does not collect, transmit, or share any
 personal data.
 
 ## What is stored locally
@@ -12,7 +12,7 @@ personal data.
 The extension stores the following on your own device only, using
 `chrome.storage.local`:
 
-- The list of URLs you register as persistent pinned tabs
+- The list of URLs you register as anchor tabs
 - The on/off state of the auto-inject toggle
 
 This data never leaves your device. It is not sent to any server, analytics

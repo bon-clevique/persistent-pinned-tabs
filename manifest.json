@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Persistent Pinned Tabs",
+  "name": "Anchor Tab",
   "version": "0.3.0",
   "description": "新しい Chrome ウィンドウを開いたときに、登録した固定タブを自動的に復元します（プロファイル単位）",
   "permissions": ["tabs", "storage"],
@@ -9,7 +9,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Persistent Pinned Tabs",
+    "default_title": "Anchor Tab",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",

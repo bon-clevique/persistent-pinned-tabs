@@ -1,4 +1,4 @@
-# Persistent Pinned Tabs
+# Anchor Tab
 
 新しい Chrome ウィンドウを開いたときに、登録した固定タブを自動的に復元する拡張機能です。
 
