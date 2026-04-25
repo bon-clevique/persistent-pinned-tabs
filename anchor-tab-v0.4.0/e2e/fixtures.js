@@ -104,8 +104,12 @@ export const test = base.extend({
   //   --disable-component-extensions-with-background-pages: blocks all SW registrations
   extContext: async ({}, use) => {
     const userDataDir = fs.mkdtempSync(path.join(os.tmpdir(), 'anchortab-e2e-'));
+    // Optional locale override (used by screenshots; harmless for E2E suite)
+    const lang = process.env.LANG_TARGET;
+    const localeArgs = lang ? [`--lang=${lang}`] : [];
     const ctx = await chromium.launchPersistentContext(userDataDir, {
       headless: false,
+      locale: lang || undefined,
       ignoreDefaultArgs: [
         '--disable-extensions',
         '--disable-component-extensions-with-background-pages',
@@ -114,6 +118,7 @@ export const test = base.extend({
         `--disable-extensions-except=${EXTENSION_PATH}`,
         `--load-extension=${EXTENSION_PATH}`,
         '--no-first-run',
+        ...localeArgs,
       ],
     });
 

@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "test": "vitest run",
-    "e2e": "playwright test --config e2e/playwright.config.js"
+    "e2e": "playwright test --config e2e/playwright.config.js",
+    "screenshots": "LANG_TARGET=en playwright test --config e2e/screenshots.config.js && LANG_TARGET=ja playwright test --config e2e/screenshots.config.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.51.1",
