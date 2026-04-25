@@ -1,0 +1,18 @@
+# Build / dependency artifacts
+node_modules/
+test-results/
+playwright-report/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Packaged extension archives (generated, not committed)
+*.zip
+
+# Internal task tracking
+.claude/
+
+# Chrome Web Store listing drafts (do not publish to repo)
+docs/store-listing.*.md
