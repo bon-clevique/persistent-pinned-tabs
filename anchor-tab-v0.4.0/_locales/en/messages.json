@@ -1,0 +1,310 @@
+{
+  "extName": {
+    "message": "AnchorTab",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Save and restore named tab group profiles for any Chrome window.",
+    "description": "Extension description"
+  },
+  "actionTitle": {
+    "message": "AnchorTab",
+    "description": "Browser action tooltip"
+  },
+  "applyBtn": {
+    "message": "Apply",
+    "description": "Button to apply a profile to the current window"
+  },
+  "saveAsNewBtn": {
+    "message": "Save as new profile",
+    "description": "Button to capture current window as a new profile"
+  },
+  "overwriteBtn": {
+    "message": "Overwrite",
+    "description": "Button to overwrite selected profile with current window"
+  },
+  "useAsIsBtn": {
+    "message": "Use as-is",
+    "description": "Button to close popup without applying anything"
+  },
+  "openSettingsBtn": {
+    "message": "Open Settings",
+    "description": "Button to open the options page"
+  },
+  "optionsTitle": {
+    "message": "AnchorTab Settings",
+    "description": "Title of the options page"
+  },
+  "exportBtn": {
+    "message": "Export",
+    "description": "Button to export profiles as JSON"
+  },
+  "importBtn": {
+    "message": "Import",
+    "description": "Button to import profiles from JSON"
+  },
+  "schemaMismatchError": {
+    "message": "Import failed: incompatible file version.",
+    "description": "Error shown when imported JSON has wrong schemaVersion"
+  },
+  "legacyMigratedBanner": {
+    "message": "Your pinned tabs from AnchorTab v0.3 have been migrated to a profile called \"Legacy Pinned\".",
+    "description": "One-time banner shown after legacy migration"
+  },
+  "modeNormal": {
+    "message": "Normal",
+    "description": "Badge label for a normal (non-incognito) window"
+  },
+  "modeIncognito": {
+    "message": "Incognito",
+    "description": "Badge label for an incognito window"
+  },
+  "noProfilesForMode": {
+    "message": "No profiles for this window mode yet.",
+    "description": "Empty state shown when no profiles match the current window mode"
+  },
+  "overwriteConfirm": {
+    "message": "Overwrite \"$NAME$\" with the current window's groups?",
+    "description": "Confirmation dialog for overwriting a profile",
+    "placeholders": {
+      "NAME": {
+        "content": "$1",
+        "example": "My Work Setup"
+      }
+    }
+  },
+  "profileInUseError": {
+    "message": "This profile is already applied to another window.",
+    "description": "Error shown when a profile is already active in another window"
+  },
+  "focusExistingBtn": {
+    "message": "Focus existing window",
+    "description": "Button to focus the window where the profile is already applied"
+  },
+  "saveAsNewPrompt": {
+    "message": "Profile name",
+    "description": "Placeholder text for the new profile name input"
+  },
+  "saveBtn": {
+    "message": "Save",
+    "description": "Button to confirm saving a new profile name"
+  },
+  "cancelBtn": {
+    "message": "Cancel",
+    "description": "Button to cancel an inline action"
+  },
+  "applyError": {
+    "message": "Failed to apply profile.",
+    "description": "Generic error message shown when applying a profile fails"
+  },
+
+  "optionsNewFromWindowBtn": {
+    "message": "New from current window",
+    "description": "Button to capture the current window as a new profile"
+  },
+  "optionsNewEmptyBtn": {
+    "message": "New empty profile",
+    "description": "Button to create a new empty profile"
+  },
+  "optionsProfileNamePlaceholder": {
+    "message": "Profile name",
+    "description": "Placeholder for profile name input in options editor"
+  },
+  "optionsSetDefaultBtn": {
+    "message": "Set as default",
+    "description": "Button to set a profile as the default"
+  },
+  "optionsDuplicateBtn": {
+    "message": "Duplicate",
+    "description": "Button to duplicate a profile"
+  },
+  "optionsDeleteBtn": {
+    "message": "Delete",
+    "description": "Button to delete a profile"
+  },
+  "optionsDeleteConfirm": {
+    "message": "Delete profile \"$1\"? This cannot be undone.",
+    "description": "Confirmation dialog for profile deletion. $1 = profile name"
+  },
+  "optionsModeLabel": {
+    "message": "Mode:",
+    "description": "Label for profile mode selector"
+  },
+  "optionsModeNormal": {
+    "message": "Normal",
+    "description": "Normal window mode option in options editor"
+  },
+  "optionsModeIncognito": {
+    "message": "Incognito",
+    "description": "Incognito window mode option in options editor"
+  },
+  "optionsAddGroupBtn": {
+    "message": "Add group",
+    "description": "Button to add a new tab group to a profile"
+  },
+  "optionsAddTabBtn": {
+    "message": "Add tab",
+    "description": "Button to add a tab to a group"
+  },
+  "optionsRemoveGroupBtn": {
+    "message": "Remove group",
+    "description": "Button to remove a tab group"
+  },
+  "optionsRemoveTabBtn": {
+    "message": "Remove",
+    "description": "Button to remove a tab from a group"
+  },
+  "optionsGroupNamePlaceholder": {
+    "message": "Group name",
+    "description": "Placeholder for group name input"
+  },
+  "optionsGroupColorLabel": {
+    "message": "Color:",
+    "description": "Label for group color dropdown"
+  },
+  "optionsGroupCollapsedLabel": {
+    "message": "Collapsed",
+    "description": "Label for group collapsed checkbox"
+  },
+  "optionsTabUrlPlaceholder": {
+    "message": "https://example.com",
+    "description": "Placeholder for tab URL input"
+  },
+  "optionsTabPinnedLabel": {
+    "message": "Pinned",
+    "description": "Label for tab pinned checkbox"
+  },
+  "optionsUpBtn": {
+    "message": "↑",
+    "description": "Button to move item up"
+  },
+  "optionsDownBtn": {
+    "message": "↓",
+    "description": "Button to move item down"
+  },
+  "optionsSettingsHeader": {
+    "message": "Settings",
+    "description": "Header for the settings section"
+  },
+  "optionsAutoOpenPopupLabel": {
+    "message": "Auto-open popup on new window",
+    "description": "Label for the auto-open popup setting toggle (legacy, kept for compatibility)"
+  },
+  "newWindowBehaviorLabel": {
+    "message": "New window behavior",
+    "description": "Legend for the new-window behavior radio group"
+  },
+  "newWindowBehaviorAutoOpen": {
+    "message": "Auto-open popup",
+    "description": "Radio option: automatically open the popup when a new window is created"
+  },
+  "newWindowBehaviorBadge": {
+    "message": "Show badge only",
+    "description": "Radio option: show a badge on the action icon instead of opening the popup"
+  },
+  "newWindowBehaviorOff": {
+    "message": "Off",
+    "description": "Radio option: do nothing when a new window is created"
+  },
+  "optionsDismissBtn": {
+    "message": "Dismiss",
+    "description": "Button to dismiss a banner"
+  },
+  "optionsImportConflictTitle": {
+    "message": "Import Conflicts",
+    "description": "Title for the import conflict resolution modal"
+  },
+  "optionsImportConflictOverwrite": {
+    "message": "Overwrite",
+    "description": "Conflict resolution option: overwrite existing profile"
+  },
+  "optionsImportConflictSuffix": {
+    "message": "Rename with suffix",
+    "description": "Conflict resolution option: import with suffix appended"
+  },
+  "optionsImportConflictSkip": {
+    "message": "Skip",
+    "description": "Conflict resolution option: skip this profile"
+  },
+  "optionsImportConflictApplyAll": {
+    "message": "Apply all as",
+    "description": "Bulk action label for conflict resolution"
+  },
+  "optionsSchemaMismatchError": {
+    "message": "Import failed: incompatible file version.",
+    "description": "Error shown when imported JSON has wrong schemaVersion (options page)"
+  },
+  "optionsEmptyListMessage": {
+    "message": "No profiles yet. Create one to get started.",
+    "description": "Message shown when the profile list is empty"
+  },
+  "optionsNamePrompt": {
+    "message": "Enter a name for this profile:",
+    "description": "Prompt asking the user to name a new profile"
+  },
+  "optionsImportTooLarge": {
+    "message": "Import failed: file exceeds 5 MB limit.",
+    "description": "Error when import file is larger than 5 MB"
+  },
+  "optionsImportTooManyProfiles": {
+    "message": "Import failed: file contains more than 500 profiles.",
+    "description": "Error when imported file has too many profiles"
+  },
+  "optionsImportTooManyGroups": {
+    "message": "Import failed: a profile contains more than 100 groups.",
+    "description": "Error when an imported profile has too many groups"
+  },
+  "optionsImportTooManyTabs": {
+    "message": "Import failed: a group contains more than 500 tabs.",
+    "description": "Error when an imported group has too many tabs"
+  },
+  "optionsImportUrlTooLong": {
+    "message": "Import failed: a tab URL exceeds 2048 characters.",
+    "description": "Error when an imported tab URL is too long"
+  },
+  "optionsImportNameTooLong": {
+    "message": "Import failed: a profile or group name exceeds 200 characters.",
+    "description": "Error when an imported profile or group name is too long"
+  },
+
+  "applySummaryWithSkipped": {
+    "message": "Applied $CREATED$ tabs in $GROUPS$ groups. Skipped $SKIPPED$: $URLS$",
+    "description": "Info banner shown after partial apply (some tabs skipped)",
+    "placeholders": {
+      "CREATED": { "content": "$1", "example": "5" },
+      "GROUPS":  { "content": "$2", "example": "2" },
+      "SKIPPED": { "content": "$3", "example": "1" },
+      "URLS":    { "content": "$4", "example": "https://example.com" }
+    }
+  },
+
+  "applySummaryAllSkipped": {
+    "message": "No tabs were created. Skipped $SKIPPED$: $URLS$",
+    "description": "Error banner shown when every tab in the profile was skipped",
+    "placeholders": {
+      "SKIPPED": { "content": "$1", "example": "3" },
+      "URLS":    { "content": "$2", "example": "chrome://newtab" }
+    }
+  },
+
+  "optionsEmptyGroupBanner": {
+    "message": "{N} empty groups in this profile will be ignored",
+    "description": "Info banner shown in the editor when the selected profile has groups with no tabs. {N} = count of empty groups"
+  },
+  "optionsExportEmptyGroupsConfirm": {
+    "message": "Export includes {N} empty groups across {M} profiles. Continue?",
+    "description": "Confirm dialog before exporting when some profiles have empty groups. {N} = total empty group count, {M} = affected profile count"
+  },
+  "optionsConfirmCancelBtn": {
+    "message": "Cancel",
+    "description": "Cancel button label in modal dialogs"
+  },
+  "optionsConfirmOkBtn": {
+    "message": "OK",
+    "description": "OK / confirm button label in modal dialogs"
+  },
+  "optionsDeleteConfirmTitle": {
+    "message": "Delete profile",
+    "description": "Title of the modal dialog that confirms profile deletion"
+  }
+}

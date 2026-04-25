@@ -1,0 +1,310 @@
+{
+  "extName": {
+    "message": "AnchorTab",
+    "description": "拡張機能の名前"
+  },
+  "extDesc": {
+    "message": "Chromeウィンドウのタブグループを名前付きプロファイルとして保存・復元できます。",
+    "description": "拡張機能の説明"
+  },
+  "actionTitle": {
+    "message": "AnchorTab",
+    "description": "ブラウザアクションのツールチップ"
+  },
+  "applyBtn": {
+    "message": "適用",
+    "description": "プロファイルを現在のウィンドウに適用するボタン"
+  },
+  "saveAsNewBtn": {
+    "message": "新しいプロファイルとして保存",
+    "description": "現在のウィンドウを新しいプロファイルとして保存するボタン"
+  },
+  "overwriteBtn": {
+    "message": "上書き",
+    "description": "選択したプロファイルを現在のウィンドウで上書きするボタン"
+  },
+  "useAsIsBtn": {
+    "message": "そのまま使用",
+    "description": "何もせずポップアップを閉じるボタン"
+  },
+  "openSettingsBtn": {
+    "message": "設定を開く",
+    "description": "オプションページを開くボタン"
+  },
+  "optionsTitle": {
+    "message": "AnchorTab 設定",
+    "description": "オプションページのタイトル"
+  },
+  "exportBtn": {
+    "message": "エクスポート",
+    "description": "プロファイルをJSONとしてエクスポートするボタン"
+  },
+  "importBtn": {
+    "message": "インポート",
+    "description": "JSONからプロファイルをインポートするボタン"
+  },
+  "schemaMismatchError": {
+    "message": "インポート失敗：ファイルのバージョンが互換性がありません。",
+    "description": "インポートされたJSONのschemaVersionが異なる場合に表示されるエラー"
+  },
+  "legacyMigratedBanner": {
+    "message": "AnchorTab v0.3 のピン留めタブが「Legacy Pinned」プロファイルに移行されました。",
+    "description": "レガシー移行後に一度だけ表示されるバナー"
+  },
+  "modeNormal": {
+    "message": "通常",
+    "description": "通常（非シークレット）ウィンドウのバッジラベル"
+  },
+  "modeIncognito": {
+    "message": "シークレット",
+    "description": "シークレットウィンドウのバッジラベル"
+  },
+  "noProfilesForMode": {
+    "message": "このウィンドウモード用のプロファイルがまだありません。",
+    "description": "現在のウィンドウモードに一致するプロファイルがない場合の空状態メッセージ"
+  },
+  "overwriteConfirm": {
+    "message": "「$NAME$」を現在のウィンドウのグループで上書きしますか？",
+    "description": "プロファイル上書き確認ダイアログ",
+    "placeholders": {
+      "NAME": {
+        "content": "$1",
+        "example": "作業用セットアップ"
+      }
+    }
+  },
+  "profileInUseError": {
+    "message": "このプロファイルはすでに別のウィンドウで使用中です。",
+    "description": "プロファイルが別ウィンドウで有効な場合のエラーメッセージ"
+  },
+  "focusExistingBtn": {
+    "message": "既存ウィンドウにフォーカス",
+    "description": "プロファイルがすでに適用されているウィンドウにフォーカスするボタン"
+  },
+  "saveAsNewPrompt": {
+    "message": "プロファイル名",
+    "description": "新しいプロファイル名入力欄のプレースホルダー"
+  },
+  "saveBtn": {
+    "message": "保存",
+    "description": "新しいプロファイル名の確定ボタン"
+  },
+  "cancelBtn": {
+    "message": "キャンセル",
+    "description": "インラインアクションをキャンセルするボタン"
+  },
+  "applyError": {
+    "message": "プロファイルの適用に失敗しました。",
+    "description": "プロファイル適用失敗時の汎用エラーメッセージ"
+  },
+
+  "optionsNewFromWindowBtn": {
+    "message": "現在のウィンドウから作成",
+    "description": "現在のウィンドウを新しいプロファイルとして取り込むボタン"
+  },
+  "optionsNewEmptyBtn": {
+    "message": "空のプロファイルを作成",
+    "description": "新しい空のプロファイルを作成するボタン"
+  },
+  "optionsProfileNamePlaceholder": {
+    "message": "プロファイル名",
+    "description": "オプションエディターのプロファイル名入力欄プレースホルダー"
+  },
+  "optionsSetDefaultBtn": {
+    "message": "デフォルトに設定",
+    "description": "プロファイルをデフォルトに設定するボタン"
+  },
+  "optionsDuplicateBtn": {
+    "message": "複製",
+    "description": "プロファイルを複製するボタン"
+  },
+  "optionsDeleteBtn": {
+    "message": "削除",
+    "description": "プロファイルを削除するボタン"
+  },
+  "optionsDeleteConfirm": {
+    "message": "プロファイル「$1」を削除しますか？この操作は元に戻せません。",
+    "description": "プロファイル削除確認ダイアログ。$1 = プロファイル名"
+  },
+  "optionsModeLabel": {
+    "message": "モード:",
+    "description": "プロファイルモードセレクターのラベル"
+  },
+  "optionsModeNormal": {
+    "message": "通常",
+    "description": "オプションエディターの通常モード選択肢"
+  },
+  "optionsModeIncognito": {
+    "message": "シークレット",
+    "description": "オプションエディターのシークレットモード選択肢"
+  },
+  "optionsAddGroupBtn": {
+    "message": "グループを追加",
+    "description": "プロファイルに新しいタブグループを追加するボタン"
+  },
+  "optionsAddTabBtn": {
+    "message": "タブを追加",
+    "description": "グループにタブを追加するボタン"
+  },
+  "optionsRemoveGroupBtn": {
+    "message": "グループを削除",
+    "description": "タブグループを削除するボタン"
+  },
+  "optionsRemoveTabBtn": {
+    "message": "削除",
+    "description": "グループからタブを削除するボタン"
+  },
+  "optionsGroupNamePlaceholder": {
+    "message": "グループ名",
+    "description": "グループ名入力欄のプレースホルダー"
+  },
+  "optionsGroupColorLabel": {
+    "message": "カラー:",
+    "description": "グループカラードロップダウンのラベル"
+  },
+  "optionsGroupCollapsedLabel": {
+    "message": "折りたたむ",
+    "description": "グループ折りたたみチェックボックスのラベル"
+  },
+  "optionsTabUrlPlaceholder": {
+    "message": "https://example.com",
+    "description": "タブURL入力欄のプレースホルダー"
+  },
+  "optionsTabPinnedLabel": {
+    "message": "固定",
+    "description": "タブ固定チェックボックスのラベル"
+  },
+  "optionsUpBtn": {
+    "message": "↑",
+    "description": "アイテムを上に移動するボタン"
+  },
+  "optionsDownBtn": {
+    "message": "↓",
+    "description": "アイテムを下に移動するボタン"
+  },
+  "optionsSettingsHeader": {
+    "message": "設定",
+    "description": "設定セクションのヘッダー"
+  },
+  "optionsAutoOpenPopupLabel": {
+    "message": "新しいウィンドウでポップアップを自動表示",
+    "description": "自動ポップアップ設定トグルのラベル（レガシー、互換性のため残存）"
+  },
+  "newWindowBehaviorLabel": {
+    "message": "新しいウィンドウの動作",
+    "description": "新しいウィンドウの動作ラジオグループの凡例"
+  },
+  "newWindowBehaviorAutoOpen": {
+    "message": "ポップアップを自動表示",
+    "description": "ラジオオプション：新しいウィンドウ作成時にポップアップを自動で開く"
+  },
+  "newWindowBehaviorBadge": {
+    "message": "バッジのみ表示",
+    "description": "ラジオオプション：ポップアップを開く代わりにアクションアイコンにバッジを表示"
+  },
+  "newWindowBehaviorOff": {
+    "message": "オフ",
+    "description": "ラジオオプション：新しいウィンドウ作成時に何もしない"
+  },
+  "optionsDismissBtn": {
+    "message": "閉じる",
+    "description": "バナーを閉じるボタン"
+  },
+  "optionsImportConflictTitle": {
+    "message": "インポートの競合",
+    "description": "インポート競合解決モーダルのタイトル"
+  },
+  "optionsImportConflictOverwrite": {
+    "message": "上書き",
+    "description": "競合解決オプション：既存プロファイルを上書き"
+  },
+  "optionsImportConflictSuffix": {
+    "message": "接尾辞付きでリネーム",
+    "description": "競合解決オプション：接尾辞を付けてインポート"
+  },
+  "optionsImportConflictSkip": {
+    "message": "スキップ",
+    "description": "競合解決オプション：このプロファイルをスキップ"
+  },
+  "optionsImportConflictApplyAll": {
+    "message": "すべてに適用",
+    "description": "競合解決の一括操作ラベル"
+  },
+  "optionsSchemaMismatchError": {
+    "message": "インポート失敗：ファイルのバージョンが互換性がありません。",
+    "description": "インポートされたJSONのschemaVersionが異なる場合のエラー（オプションページ）"
+  },
+  "optionsEmptyListMessage": {
+    "message": "プロファイルがまだありません。作成して始めましょう。",
+    "description": "プロファイルリストが空の場合のメッセージ"
+  },
+  "optionsNamePrompt": {
+    "message": "このプロファイルの名前を入力してください:",
+    "description": "新しいプロファイルに名前を付けるプロンプト"
+  },
+  "optionsImportTooLarge": {
+    "message": "インポート失敗：ファイルが5MBの上限を超えています。",
+    "description": "インポートファイルが5MBを超える場合のエラー"
+  },
+  "optionsImportTooManyProfiles": {
+    "message": "インポート失敗：ファイルに500件を超えるプロファイルが含まれています。",
+    "description": "インポートファイルのプロファイル数が多すぎる場合のエラー"
+  },
+  "optionsImportTooManyGroups": {
+    "message": "インポート失敗：プロファイルに100件を超えるグループが含まれています。",
+    "description": "インポートプロファイルのグループ数が多すぎる場合のエラー"
+  },
+  "optionsImportTooManyTabs": {
+    "message": "インポート失敗：グループに500件を超えるタブが含まれています。",
+    "description": "インポートグループのタブ数が多すぎる場合のエラー"
+  },
+  "optionsImportUrlTooLong": {
+    "message": "インポート失敗：タブのURLが2048文字を超えています。",
+    "description": "インポートしたタブのURLが長すぎる場合のエラー"
+  },
+  "optionsImportNameTooLong": {
+    "message": "インポート失敗：プロファイル名またはグループ名が200文字を超えています。",
+    "description": "インポートしたプロファイルまたはグループの名前が長すぎる場合のエラー"
+  },
+
+  "applySummaryWithSkipped": {
+    "message": "$CREATED$ 個のタブを $GROUPS$ グループに適用しました。$SKIPPED$ 件スキップ: $URLS$",
+    "description": "一部のタブがスキップされた場合に表示されるinfoバナー",
+    "placeholders": {
+      "CREATED": { "content": "$1", "example": "5" },
+      "GROUPS":  { "content": "$2", "example": "2" },
+      "SKIPPED": { "content": "$3", "example": "1" },
+      "URLS":    { "content": "$4", "example": "https://example.com" }
+    }
+  },
+
+  "applySummaryAllSkipped": {
+    "message": "タブが作成されませんでした。$SKIPPED$ 件スキップ: $URLS$",
+    "description": "プロファイルのすべてのタブがスキップされた場合のエラーバナー",
+    "placeholders": {
+      "SKIPPED": { "content": "$1", "example": "3" },
+      "URLS":    { "content": "$2", "example": "chrome://newtab" }
+    }
+  },
+
+  "optionsEmptyGroupBanner": {
+    "message": "このプロファイルには空のグループが {N} 個あります（適用・エクスポート時は無視されます）",
+    "description": "選択中のプロファイルにタブのないグループがある場合にエディターに表示されるinfoバナー。{N} = 空グループ数"
+  },
+  "optionsExportEmptyGroupsConfirm": {
+    "message": "{M} 個のプロファイルに合計 {N} 個の空グループが含まれています。エクスポートしますか？",
+    "description": "空グループを含むプロファイルをエクスポートする前の確認ダイアログ。{N} = 空グループ合計数、{M} = 対象プロファイル数"
+  },
+  "optionsConfirmCancelBtn": {
+    "message": "キャンセル",
+    "description": "モーダルダイアログのキャンセルボタンラベル"
+  },
+  "optionsConfirmOkBtn": {
+    "message": "OK",
+    "description": "モーダルダイアログのOK・確定ボタンラベル"
+  },
+  "optionsDeleteConfirmTitle": {
+    "message": "プロファイルを削除",
+    "description": "プロファイル削除確認モーダルのタイトル"
+  }
+}

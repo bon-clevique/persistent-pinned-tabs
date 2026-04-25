@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnchorTab</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      width: 360px;
+      min-height: 80px;
+      background: #fff;
+      color: #1a1a1a;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px 8px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .header-title {
+      font-size: 14px;
+      font-weight: 600;
+      flex: 1;
+    }
+    .mode-badge {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+    .mode-badge--normal {
+      background: #e8f4e8;
+      color: #2a6a2a;
+    }
+    .mode-badge--incognito {
+      background: #ede8f4;
+      color: #4a2a7a;
+    }
+
+    /* ── Error banner ── */
+    .error-banner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: #fff3cd;
+      border-bottom: 1px solid #ffc107;
+      font-size: 12px;
+    }
+    .error-banner[hidden] { display: none; }
+    .error-message { flex: 1; }
+
+    /* ── Profile list ── */
+    .profile-list-section {
+      padding: 8px 0;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .profile-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+    }
+    .profile-row:hover {
+      background: #f5f5f5;
+    }
+    .profile-row input[type="radio"] {
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .profile-name {
+      flex: 1;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ── Empty state ── */
+    .empty-state {
+      padding: 16px 12px;
+      color: #888;
+      text-align: center;
+      font-size: 12px;
+    }
+    .empty-state[hidden] { display: none; }
+
+    /* ── Inline name prompt ── */
+    .name-prompt {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border-top: 1px solid #e5e5e5;
+      background: #fafafa;
+    }
+    .name-prompt[hidden] { display: none; }
+    .name-prompt input[type="text"] {
+      flex: 1;
+      padding: 4px 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .name-prompt input[type="text"]:focus {
+      outline: none;
+      border-color: #4a90d9;
+    }
+
+    /* ── Action bar ── */
+    .action-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 8px 12px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fff;
+      font-size: 12px;
+      cursor: pointer;
+      white-space: nowrap;
+      color: #1a1a1a;
+    }
+    .btn:hover { background: #f0f0f0; }
+    .btn:active { background: #e0e0e0; }
+    .btn:disabled { opacity: 0.45; cursor: default; pointer-events: none; }
+
+    .btn-apply {
+      padding: 3px 8px;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+    .btn-primary {
+      background: #4a90d9;
+      border-color: #3a7fc8;
+      color: #fff;
+    }
+    .btn-primary:hover { background: #3a7fc8; }
+    .btn-small {
+      padding: 3px 8px;
+      font-size: 11px;
+    }
+    .btn-link {
+      border-color: transparent;
+      background: transparent;
+      color: #666;
+      padding: 4px 6px;
+    }
+    .btn-link:hover { background: #f0f0f0; border-color: #ccc; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <span class="header-title">AnchorTab</span>
+    <span id="mode-badge" class="mode-badge"></span>
+  </div>
+
+  <!-- Error banner (hidden by default) -->
+  <div id="error-banner" class="error-banner" hidden>
+    <span id="error-message" class="error-message"></span>
+    <button id="focus-existing-btn" class="btn btn-small" hidden></button>
+  </div>
+
+  <!-- Profile list -->
+  <div class="profile-list-section">
+    <div id="profile-list"></div>
+    <div id="empty-state" class="empty-state" hidden></div>
+  </div>
+
+  <!-- Inline name prompt (hidden by default) -->
+  <div id="name-prompt" class="name-prompt" hidden>
+    <input type="text" id="name-input" maxlength="80" />
+    <button id="save-name-btn" class="btn btn-primary btn-small"></button>
+    <button id="cancel-name-btn" class="btn btn-small"></button>
+  </div>
+
+  <!-- Action bar -->
+  <div class="action-bar">
+    <button id="save-as-new-btn" class="btn"></button>
+    <button id="overwrite-btn" class="btn" disabled></button>
+    <button id="use-as-is-btn" class="btn btn-link"></button>
+    <button id="open-settings-btn" class="btn btn-link"></button>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

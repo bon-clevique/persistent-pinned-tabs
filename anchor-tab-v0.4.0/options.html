@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnchorTab Settings</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+      background: #f5f5f5;
+      color: #222;
+      min-height: 100vh;
+    }
+
+    #app { max-width: 1000px; margin: 0 auto; padding: 16px; }
+
+    /* Banners */
+    .banner {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 14px; border-radius: 6px; margin-bottom: 12px;
+    }
+    .banner-info  { background: #e8f4fd; border: 1px solid #90caf9; }
+    .banner-success { background: #e8f5e9; border: 1px solid #a5d6a7; }
+    .banner-error   { background: #fdecea; border: 1px solid #ef9a9a; color: #b71c1c; }
+    .banner span { flex: 1; }
+
+    /* Toolbar */
+    #toolbar {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      padding: 10px; background: #fff;
+      border: 1px solid #ddd; border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    /* Two-pane layout */
+    #main {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    /* Profile list */
+    #profile-list {
+      background: #fff; border: 1px solid #ddd; border-radius: 6px;
+      overflow-y: auto; max-height: 70vh; padding: 6px;
+    }
+    .profile-item {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px 10px; border-radius: 5px; cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .profile-item:hover { background: #f0f4ff; }
+    .profile-item.selected { background: #e3edff; border-color: #90b8ff; }
+    .profile-name { flex: 1; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .mode-badge {
+      font-size: 11px; padding: 2px 6px; border-radius: 10px;
+      background: #e0e0e0; color: #555;
+    }
+    .default-star { color: #f9a825; font-size: 16px; }
+    .empty-msg { color: #999; padding: 12px; font-style: italic; }
+
+    /* Editor */
+    #editor {
+      background: #fff; border: 1px solid #ddd; border-radius: 6px;
+      padding: 16px; overflow-y: auto; max-height: 70vh;
+    }
+
+    .editor-header { margin-bottom: 12px; }
+    .editor-header input { width: 100%; font-size: 16px; font-weight: 600; padding: 6px 8px; border: 1px solid #ccc; border-radius: 5px; }
+
+    .editor-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+
+    /* Group blocks */
+    .group-block {
+      border: 1px solid #ddd; border-radius: 6px;
+      padding: 10px; margin-bottom: 10px; background: #fafafa;
+    }
+    .group-header { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-bottom: 8px; }
+    .group-name-input { flex: 1; min-width: 120px; padding: 4px 6px; border: 1px solid #ccc; border-radius: 4px; }
+
+    /* Tab rows */
+    .tab-row { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
+    .tab-url-input { flex: 1; min-width: 200px; padding: 4px 6px; border: 1px solid #ccc; border-radius: 4px; }
+
+    /* Settings section */
+    #settings-section {
+      background: #fff; border: 1px solid #ddd; border-radius: 6px;
+      padding: 14px; margin-top: 8px;
+    }
+    #settings-section h2 { font-size: 15px; margin-bottom: 10px; }
+    #settings-section label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+
+    /* Buttons */
+    button {
+      padding: 5px 12px; border-radius: 5px; border: 1px solid #ccc;
+      background: #fff; cursor: pointer; font-size: 13px; white-space: nowrap;
+    }
+    button:hover:not(:disabled) { background: #f0f0f0; }
+    button:disabled { opacity: 0.4; cursor: default; }
+    button.danger { color: #c62828; border-color: #ef9a9a; }
+    button.danger:hover:not(:disabled) { background: #fdecea; }
+
+    select { padding: 4px 6px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; }
+    input[type="text"], input[type="url"] { font-size: 13px; }
+
+    /* Conflict modal body (rendered inside anchor-modal via modal.js) */
+    .conflict-bulk { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+    .conflict-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; }
+    .conflict-table td { padding: 6px 8px; border-bottom: 1px solid #eee; vertical-align: middle; }
+    .conflict-table label { display: inline-flex; align-items: center; gap: 4px; margin-right: 8px; }
+
+    /* Empty-group banner in editor */
+    .empty-group-banner { margin-bottom: 10px; }
+
+    @media (max-width: 640px) {
+      #main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <script type="module" src="options.js"></script>
+</body>
+</html>
